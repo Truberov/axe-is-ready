@@ -9,5 +9,5 @@ services:
     ports:
       - "8080:8080"
     volumes:
-      - ./qna_service/chroma_db:/code/chroma_db
+      - ./qna_service/chroma_data:/code/chroma_data
     restart: always
