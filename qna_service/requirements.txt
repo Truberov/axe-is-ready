@@ -4,6 +4,7 @@ langchain-cohere
 langgraph
 langchain_community
 langserve[all]
+pydantic==1.10.13
 sentence-transformers
 tokenizers==0.15.2
 transformers==4.38.2
