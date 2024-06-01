@@ -1,9 +1,12 @@
 langchain
 langchain-openai
 langchain-cohere
+langgraph
 langchain_community
 langserve[all]
 sentence-transformers
+tokenizers==0.15.2
+transformers==4.38.2
 tiktoken
 chromadb
 redis
