@@ -185,3 +185,5 @@ logs
 # Local env files
 .env.*
 !.env.example
+
+/qna_service/models/**
