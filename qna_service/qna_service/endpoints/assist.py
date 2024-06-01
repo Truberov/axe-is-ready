@@ -9,7 +9,7 @@ api_router = APIRouter(tags=["Health check"])
 
 
 @api_router.post(
-    "/assist",
+    "/assist_legacy",
     response_model=RAGOutput,
     status_code=status.HTTP_200_OK,
 )
@@ -33,12 +33,12 @@ async def get_answer(
 
 
 def format_docs_for_output(docs):  # TODO: убрать отсюда
-    return [doc.page_content for doc in docs]
+    return [doc.metadata['url'] for doc in docs]
 
 
 @api_router.post(
-    "/graph",
-    response_model=RAGOutputForEval,
+    "/assist",
+    response_model=RAGOutput,
     status_code=status.HTTP_200_OK,
 )
 async def get_answer(
@@ -46,4 +46,4 @@ async def get_answer(
 ):
     question = query.query
     result = graph_app.invoke({"question": question, "remaining_transform_attempts": 3})
-    return RAGOutputForEval(text=result["generation"], docs=format_docs_for_output(result["documents"]))
+    return RAGOutput(text=result["generation"], links=format_docs_for_output(result["documents"]))
