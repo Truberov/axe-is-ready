@@ -7,7 +7,7 @@ from qna_service.config import get_settings
 
 settings = get_settings()
 
-embedding_function = SentenceTransformerEmbeddings(model_name="BAAI/bge-m3")
+embedding_function = SentenceTransformerEmbeddings(model_name="./bge-m3")
 
 vectorstore = Chroma(
     collection_name="total",

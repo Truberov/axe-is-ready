@@ -1,5 +1,6 @@
 langchain
 langchain-openai
+langchain-cohere
 langchain_community
 langserve[all]
 sentence-transformers
