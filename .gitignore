@@ -187,3 +187,4 @@ logs
 !.env.example
 
 /qna_service/models/**
+!qna_service/models/readme.md
