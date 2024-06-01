@@ -1,0 +1,8 @@
+langchain
+langchain-openai
+langchain_community
+langserve[all]
+sentence-transformers
+tiktoken
+chromadb
+redis
