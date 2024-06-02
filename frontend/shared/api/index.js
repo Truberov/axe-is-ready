@@ -1,12 +1,10 @@
 import { useBaseFetch } from '~/composables/useBaseFetch.js';
 
 export async function getAnswer(question) {
-  const { data } = await useBaseFetch('/assist_legacy', {
+  const { data } = await useBaseFetch('/assist', {
     method: 'POST',
     body: {
-      query: {
-        question,
-      },
+      query: question,
     },
   });
 
