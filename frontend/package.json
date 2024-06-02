@@ -1,0 +1,32 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-module": "^4.1.0",
+    "@nuxtjs/tailwindcss": "^6.11.0",
+    "@vue/eslint-config-airbnb": "^8.0.0",
+    "eslint": "^8.56.0",
+    "eslint-plugin-vue": "^9.20.1",
+    "nuxt-mdi": "^1.1.6",
+    "nuxt-quasar-ui": "^2.0.7",
+    "tailwindcss": "^3.4.3"
+  },
+  "dependencies": {
+    "@mdi/js": "^7.4.47",
+    "@quasar/extras": "^1.16.11",
+    "date-fns": "^3.6.0",
+    "lodash.clonedeep": "^4.5.0",
+    "lodash.debounce": "^4.0.8",
+    "nuxt": "^3.11.1",
+    "vue": "^3.4.21",
+    "vue-router": "^4.3.0"
+  }
+}
