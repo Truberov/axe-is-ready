@@ -3,7 +3,6 @@ from typing import List
 from operator import itemgetter
 
 from langchain_openai import ChatOpenAI
-from langchain_cohere import ChatCohere
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.runnables import RunnableParallel, RunnablePassthrough
 from langchain_core.documents import Document
@@ -14,7 +13,11 @@ from .prompts import ANSWER_PROMPT
 
 settings = get_settings()
 
-llm = ChatOpenAI(api_key=settings.API_KEY, model='gpt-3.5-turbo', http_client=httpx.Client(proxies=settings.proxies))
+llm = ChatOpenAI(
+    api_key=settings.API_KEY,
+    model='gpt-3.5-turbo',
+    # http_client=httpx.Client(proxies=settings.proxies)
+)
 
 
 def format_docs(docs: List[Document]) -> str:

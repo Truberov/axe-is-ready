@@ -4,7 +4,6 @@ from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.pydantic_v1 import BaseModel, Field
 from langchain_openai import ChatOpenAI
-from langchain_cohere import ChatCohere
 from operator import itemgetter
 
 from qna_service.config import get_settings
@@ -15,7 +14,7 @@ llm = ChatOpenAI(
     api_key=settings.API_KEY,
     model="gpt-4-turbo-2024-04-09",
     temperature=0,
-    http_client=httpx.Client(proxies=settings.proxies)
+    # http_client=httpx.Client(proxies=settings.proxies)
 )
 
 

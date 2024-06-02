@@ -10,6 +10,7 @@ class DefaultSettings:
     REDIS_URL: str = environ.get("REDIS_URL", 'redis://0.0.0.0:6379')
     CHROMA_BASE_DIR: str = environ.get("CHROMA_BASE_DIR", "./chroma_data")
     API_KEY: str = environ.get("API_KEY")
+    COHERE_API_KEY: str = environ.get("COHERE_API_KEY")
     PROXY: dict = environ.get("PROXY")
 
     @property
